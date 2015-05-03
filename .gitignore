@@ -22,3 +22,7 @@
 *.rar
 *.tar
 *.zip
+
+# SiftGPU binaries (shouldn't be here anyway)
+external/SiftGPU/bin
+
