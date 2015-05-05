@@ -34,7 +34,6 @@
 #include <QStringList> 
 #include <rosbag/bag.h>
 
-namespace rgbdslam{
 //forward-declare to avoid including tf
 ///\cond
 namespace tf{
@@ -42,6 +41,7 @@ namespace tf{
 }
 ///\endcond
 
+namespace rgbdslam{
 //The policy merges kinect messages with approximately equal timestamp into one callback 
 typedef message_filters::sync_policies::ApproximateTime<sensor_msgs::Image, 
                                                         sensor_msgs::Image, 

@@ -64,11 +64,10 @@
 #include "g2o/core/hyper_dijkstra.h"
 #include "g2o/core/robust_kernel_impl.h"
 
-namespace rgbdslam{
 namespace tf {
 class TransformListener;
 }
-
+namespace rgbdslam{
 //typedef g2o::HyperGraph::VertexSet::iterator Vset_it;
 ///Type to iterate over graph map
 typedef std::map<int, Node* >::iterator graph_it;

@@ -29,7 +29,6 @@
 #include <QMatrix4x4> 
 #include <rosbag/bag.h>
 
-namespace rgbdslam{
 //forward-declare to avoid including tf
 ///\cond
 namespace tf{
@@ -38,6 +37,7 @@ namespace tf{
 ///\endcond
 
 
+namespace rgbdslam{
 //!Handles most of the ROS-based communication
 
 /** The purpose of this class is to listen to 

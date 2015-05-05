@@ -19,7 +19,6 @@
 #include <ros/ros.h>
 #include <boost/any.hpp>
 
-namespace rgbdslam{
 #ifdef HEMACLOUDS
 #define PCL_NO_PRECOMPILE
 #endif
@@ -31,6 +30,9 @@ namespace rgbdslam{
 #include "pcl_ros/point_cloud.h"
 #include "pcl/point_types.h"
 #include "point_types.h"
+
+namespace rgbdslam{
+
 #ifdef RGB_IS_4TH_DIM
 typedef pcl::PointXYZ point_type;
 typedef pcl::PointXYZNormal point_normal_type;

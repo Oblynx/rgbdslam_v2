@@ -44,7 +44,6 @@
 
 #include "opencv2/core/core.hpp"
 
-namespace rgbdslam{
 /*!
  Adjustable ORB implementation. Modified from original ORB by Felix Endres
 */
@@ -93,5 +92,6 @@ typedef AORB AorbDescriptorExtractor;
 
 
 }
+namespace rgbdslam{
 } //namespace rgbdslam
 #endif

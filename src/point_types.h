@@ -9,7 +9,6 @@
 #define	HEMAS_POINT_TYPES_H
 #include <pcl/point_types.h>
 
-namespace rgbdslam{
 namespace hema {
 
     struct PointXYGRGBCam {
@@ -67,8 +66,9 @@ namespace hema {
         }
         EIGEN_MAKE_ALIGNED_OPERATOR_NEW
     } EIGEN_ALIGN16;
-}
+}   // namespace hema
 
+namespace rgbdslam{
 POINT_CLOUD_REGISTER_POINT_STRUCT(
         hema::PointXYGRGBCam,
         (float, x, x)
