@@ -64,6 +64,7 @@
 #include "g2o/core/hyper_dijkstra.h"
 #include "g2o/core/robust_kernel_impl.h"
 
+namespace rgbdslam{
 namespace tf {
 class TransformListener;
 }
@@ -393,5 +394,5 @@ protected:
 ///Send node's pointcloud with given publisher and timestamp
 void publishCloud(Node* node, ros::Time timestamp, ros::Publisher pub);
 
-
+} // namespace rgbdslam
 #endif /* GRAPH_MANAGER_H_ */

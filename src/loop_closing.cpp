@@ -8,6 +8,8 @@
 
 #include "graph_manager.h"
 
+using namespace rgbdslam;
+
 using namespace std;
 
 

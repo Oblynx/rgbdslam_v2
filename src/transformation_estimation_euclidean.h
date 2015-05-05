@@ -3,6 +3,8 @@
 #include <Eigen/Core>
 #include <opencv2/features2d/features2d.hpp>
 #include <vector>
+
+namespace rgbdslam{
 class Node;
 // Compute the transformation from matches using pcl::TransformationFromCorrespondences
 Eigen::Matrix4f getTransformFromMatches(const Node* newer_node,
@@ -20,4 +22,5 @@ Eigen::Matrix4f getTransformFromMatchesUmeyama(const Node* newer_node,
 inline bool containsNaN(const Eigen::Matrix4f& mat){
     return (mat.array() != mat.array()).any(); //No NaNs
 }
+} // namespace rgbdslam
 #endif

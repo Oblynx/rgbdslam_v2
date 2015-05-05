@@ -21,6 +21,7 @@
 #include <Eigen/Core>
 #include "edge.h"
 
+namespace rgbdslam{
 class MatchingResult {
     public:
         MatchingResult() : 
@@ -44,5 +45,6 @@ class MatchingResult {
     public:
       EIGEN_MAKE_ALIGNED_OPERATOR_NEW
 };
+} // namespace rgbdslam
         
 #endif

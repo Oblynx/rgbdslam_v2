@@ -19,6 +19,8 @@
 #include "g2o/types/slam3d/edge_se3.h" //For setEmpiricalCovariances
 #include "scoped_timer.h"
 
+using namespace rgbdslam;
+
 ///This file contains methods of the GraphManager class without extra 
 ///dependencies (except for the class header).
 

@@ -19,6 +19,7 @@
 #include <ros/ros.h>
 #include <boost/any.hpp>
 
+namespace rgbdslam{
 #ifdef HEMACLOUDS
 #define PCL_NO_PRECOMPILE
 #endif
@@ -164,5 +165,5 @@ private:
         handle.setParam(param, new_val);
     }
 };
-
+} // namespace rgbdslam
 #endif /* PARAMETER_SERVER_H_ */

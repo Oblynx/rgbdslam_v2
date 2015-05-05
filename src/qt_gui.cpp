@@ -33,6 +33,8 @@
 #include <QList>
 #include <QComboBox>
 
+using namespace rgbdslam;
+
 ///Constructs a QT GUI for easy control of RGBDSLAM
 Graphical_UI::Graphical_UI() : filename("quicksave.pcd"), glviewer(NULL)
 {

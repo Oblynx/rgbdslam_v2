@@ -17,6 +17,8 @@
 
 #include "qtros.h"
 
+using namespace rgbdslam;
+
 QtROS::QtROS(int argc, char *argv[], const char* node_name) {
   std::cout << "Initializing Node...\n";
   ros::init(argc, argv, node_name);

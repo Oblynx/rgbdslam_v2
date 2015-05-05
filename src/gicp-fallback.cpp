@@ -35,6 +35,8 @@
 #include <pcl/registration/impl/icp.hpp>
 #include <pcl/registration/registration.h>
 #include <pcl/registration/impl/registration.hpp>
+
+using namespace rgbdslam;
 using namespace std;
 
 void saveCloud(const char* filename, const pointcloud_type& pc, const int max_cnt, const bool color){

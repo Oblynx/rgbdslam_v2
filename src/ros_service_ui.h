@@ -26,6 +26,7 @@
 #include "rgbdslam/rgbdslam_ros_ui_f.h"
 #include "rgbdslam/rgbdslam_ros_ui_s.h"
 
+namespace rgbdslam{
 class QAction;
 
 //!Headless version of the Graphical_UI
@@ -88,4 +89,5 @@ private:
     ros::ServiceServer server_s;
 };
 
+} // namespace rgbdslam
 #endif

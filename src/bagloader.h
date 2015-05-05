@@ -29,6 +29,7 @@
 #include <QMatrix4x4> 
 #include <rosbag/bag.h>
 
+namespace rgbdslam{
 //forward-declare to avoid including tf
 ///\cond
 namespace tf{
@@ -91,4 +92,5 @@ class BagLoader : public QObject {
     int data_id_;
 };
 
+} // namespace rgbdslam
 #endif

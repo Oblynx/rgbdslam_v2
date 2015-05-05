@@ -17,6 +17,8 @@
 #include <pcl/filters/filter.h>
 #include "scoped_timer.h"
 
+using namespace rgbdslam;
+
 void filterCloud(const pointcloud_type& cloud_in, pointcloud_type& cloud_out, int desired_size){
   ScopedTimer s(__FUNCTION__);
   cloud_out.clear();

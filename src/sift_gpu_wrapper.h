@@ -24,6 +24,7 @@
 #include <SiftGPU/SiftGPU.h>
 #include <QMutex>
 
+namespace rgbdslam{
 /*!
  * \brief Interface for SiftGPU
  * The class is used as an interface to SiftGPU.
@@ -105,5 +106,5 @@ private:
   mutable QMutex gpu_mutex;
 };
 
+} // namespace rgbdslam
 #endif
-//#endif

@@ -20,6 +20,7 @@
 #include "g2o/types/slam3d/se3quat.h"
 #include "matching_result.h"
 
+namespace rgbdslam{
 typedef g2o::VertexPointXYZ  LM_vertex_type;
 typedef g2o::EdgeSE3PointXYZDepth Proj_edge_type;
 
@@ -37,5 +38,5 @@ struct Landmark {
  }
 };
 
-
+} // namespace rgbdslam
 #endif /* LANDMARK_H_ */

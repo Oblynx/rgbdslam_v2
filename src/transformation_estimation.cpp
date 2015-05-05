@@ -22,6 +22,8 @@
 #include "g2o/core/optimization_algorithm_levenberg.h"
 #include "g2o/core/robust_kernel_impl.h"
 
+using namespace rgbdslam;
+
 using namespace Eigen;
 using namespace std;
 using namespace g2o;

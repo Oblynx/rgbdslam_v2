@@ -22,6 +22,9 @@
 #include <stdio.h>
 #include "parameter_server.h"
 #include "scoped_timer.h"
+
+using namespace rgbdslam;
+
 using namespace cv;
 
 SiftGPUWrapper* SiftGPUWrapper::instance = NULL;

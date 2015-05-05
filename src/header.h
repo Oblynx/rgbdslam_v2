@@ -3,6 +3,7 @@
 #ifndef RGBDSLAM_MYHEADER
 #define RGBDSLAM_MYHEADER
 
+namespace rgbdslam{
 ///A class to facilitate parallel use of pcl and ros header
 class myHeader {
   public:
@@ -21,4 +22,5 @@ class myHeader {
     ros::Time stamp; ///<Allows direct access as for pcl/ros header
     std::string frame_id;///<Allows direct access as for pcl/ros header
 };
+} // namespace rgbdslam
 #endif

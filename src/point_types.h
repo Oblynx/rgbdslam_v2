@@ -8,6 +8,8 @@
 #ifndef HEMAS_POINT_TYPES_H
 #define	HEMAS_POINT_TYPES_H
 #include <pcl/point_types.h>
+
+namespace rgbdslam{
 namespace hema {
 
     struct PointXYGRGBCam {
@@ -111,5 +113,6 @@ POINT_CLOUD_REGISTER_POINT_STRUCT(
 
 //PCL_INSTANTIATE_initTree(pcl::PointXYZRGBCamSL)
 
+} // namespace rgbdslam
 #endif	/* POINT_TYPES_H */
 

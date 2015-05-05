@@ -17,6 +17,7 @@
  */
 #include "parameter_server.h"
 
+namespace rgbdslam{
 inline double depth_std_dev(double depth)
 {
   // From Khoselham and Elberink?
@@ -63,4 +64,5 @@ inline void backProject(const float& fxinv, const float& fyinv,
   out_y = (v - cy) * z * fyinv;
   out_z = z;
 }
+} // namespace rgbdslam
 #endif

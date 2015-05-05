@@ -2,6 +2,7 @@
 #include <string>
 #include <stdint.h>
 
+namespace rgbdslam{
 /// Creates Feature Detector Objects accordingt to the type.
 /// Possible: FAST, SURF, SIFT, ORB
 /// The features are the self-adjusting versions (see
@@ -12,3 +13,4 @@ cv::FeatureDetector* createDetector(const std::string& detectorType);
 cv::DescriptorExtractor* createDescriptorExtractor(const std::string& descriptorType);
 
 int bruteForceSearchORB(const uint64_t* v, const uint64_t* search_array, const unsigned int& size, int& result_index);
+} // namespace rgbdslam

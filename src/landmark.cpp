@@ -19,6 +19,9 @@
 
 
 #include <utility>
+
+using namespace rgbdslam;
+
 using namespace std;
 
 

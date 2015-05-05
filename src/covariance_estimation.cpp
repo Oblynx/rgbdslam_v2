@@ -2,6 +2,7 @@
 #include <iostream>
 #include <fstream>
 
+using namespace rgbdslam;
 
 Vector6d toVectorScaledAxis(Vector6d vecMQT)
 {

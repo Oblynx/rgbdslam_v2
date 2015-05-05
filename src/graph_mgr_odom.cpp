@@ -5,6 +5,7 @@
 #include <tf/transform_listener.h>
 #include "g2o/types/slam3d/edge_se3.h"
 
+using namespace rgbdslam;
 
 //specifies the information matrix for the odometry edge
 //tf::Transform odomTf is in the camera coordinate system

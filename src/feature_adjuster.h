@@ -2,6 +2,7 @@
 #define FEATUREADJUSTER_H
 #include <opencv2/features2d/features2d.hpp>
 
+namespace rgbdslam{
 /** \brief an detector adjuster optimized for image sequences (video).
  * Use this Adjuster with the DynamicAdaptedFeatureDetector. 
  * It lets you set the increase/decrease factor for faster adaptation.
@@ -118,5 +119,5 @@ protected:
     int edgeThreshold; 
 };
 
-
+} // namespace rgbdslam
 #endif

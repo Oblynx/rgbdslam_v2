@@ -40,6 +40,8 @@
 #include <pcl_ros/point_cloud.h>
 #include <pcl_ros/transforms.h>
 
+using namespace rgbdslam;
+
 // If QT Concurrent is available, run the saving in a seperate thread
 void GraphManager::sendAllClouds(bool threaded){
     if (ParameterServer::instance()->get<bool>("concurrent_io") && threaded) {

@@ -59,6 +59,9 @@
 #include <string>
 #include <iostream>
 #include <cmath>
+
+using namespace rgbdslam;
+
 QMutex Node::gicp_mutex;
 QMutex Node::siftgpu_mutex;
 

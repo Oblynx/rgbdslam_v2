@@ -3,6 +3,8 @@
 #include "g2o/core/sparse_optimizer.h"
 #include "g2o/types/slam3d/edge_se3.h"
 #include "scoped_timer.h"
+
+namespace rgbdslam{
 //Compute (inverse) covariances from edge errors, optionally weighted by inverse distance to given measurement
 typedef Eigen::Matrix<double,6,6> InfoMatType;
 typedef Eigen::Matrix<double,6,1> Vector6d;
@@ -66,4 +68,5 @@ void edgesToErrorMatrix(const EdgeSet& edges, Matrix6Xd& output)
     }
   }
 }
+} // namespace rgbdslam
 #endif

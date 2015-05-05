@@ -1,15 +1,22 @@
 #ifndef COLOR_OCTOMAP_SERVER_RGBDSLAM
 #define COLOR_OCTOMAP_SERVER_RGBDSLAM
 
-#include "parameter_server.h"
+#include <memory>
+#include <boost/shared_ptr.hpp>
+#include <qtconcurrentrun.h>
+#include <pcl_ros/transforms.h>
+#include <pcl_ros/impl/transforms.hpp>
+#include <GL/gl.h>
 //#include <octomap/ColorVoxelMap.h>
 #include <octomap/ColorOcTree.h>
 #include <octomap/Pointcloud.h>
 #include <octomap/octomap.h>
-#include <qtconcurrentrun.h>
-#include <memory>
-#include <boost/shared_ptr.hpp>
+
+#include "parameter_server.h"
 #include "renderable.h"
+#include "scoped_timer.h"
+
+namespace rgbdslam{
 
   class ColorOctomapServer : public Renderable {
   public:
@@ -40,5 +47,5 @@
     mutable QFuture<void> rendering;  //Mutable is a hack, otherwise waitforfinished cannot be called in const function
   };
 
+} // namespace rgbdslam
 #endif
-

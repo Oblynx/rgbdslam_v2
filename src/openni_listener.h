@@ -34,6 +34,7 @@
 #include <QStringList> 
 #include <rosbag/bag.h>
 
+namespace rgbdslam{
 //forward-declare to avoid including tf
 ///\cond
 namespace tf{
@@ -203,5 +204,5 @@ class OpenNIListener : public QObject {
     int num_processed_;
     std::string image_encoding_;
 };
-
+} // namespace rgbdslam
 #endif

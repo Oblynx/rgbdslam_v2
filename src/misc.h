@@ -23,6 +23,7 @@
 #include "point_types.h"
 #include "g2o/types/slam3d/vertex_se3.h"
 
+namespace rgbdslam{
 ///Overlay the monochrom edges and depth jumps
 void overlay_edges(cv::Mat visual, cv::Mat depth, cv::Mat& visual_edges, cv::Mat& depth_edges);
 ///Print tf::Transform via ROS_INFO
@@ -162,4 +163,5 @@ cv::Point nearest_neighbor(const cv::Mat source&, const cv::Mat& destination, co
 Eigen::Vector3f nearest_neighbor(const cv::Mat source&, const cv::Mat& destination, const Eigen::Matrix4f& transformation_source_to_destination, Eigen::Vector3f query_point);
 */
 void getColor(const point_type& p, unsigned char& r, unsigned char& g, unsigned char& b);
+} // namespace rgbdslam
 #endif

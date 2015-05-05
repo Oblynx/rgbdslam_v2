@@ -2,13 +2,13 @@ cmake_minimum_required(VERSION 2.4.6)
 #########################################################
 ### USER CONFIG #########################################
 #########################################################
-set(USE_SIFT_GPU        1) 
+set(USE_SIFT_GPU        0) 
 set(ENV{SIFT_GPU_MODE}	2) #CUDA = 1, GLSL = 2
 set(ENV{SIFT_GPU_CUDA_PATH}	/usr/local/cuda)	
 set(USE_GICP_BIN		0)
 set(USE_GICP_CODE		0)
 set(USE_PCL_ICP		  0)
-set(USE_GL2PS       0) #For printing the 3D Window to PostScript - requires installation of additional library: libgl2ps-dev
+set(USE_GL2PS       1) #For printing the 3D Window to PostScript - requires installation of additional library: libgl2ps-dev
 IF ("${ROS_PARALLEL_JOBS}" EQUAL "")
   set(ROS_PARALLEL_JOBS 1)
 endif ("${ROS_PARALLEL_JOBS}" EQUAL "")

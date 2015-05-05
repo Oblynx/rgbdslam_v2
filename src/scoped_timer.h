@@ -2,6 +2,7 @@
 #define RGBDSLAM_SCOPED_TIMER_H
 #include <ctime>
 
+namespace rgbdslam{
 ///Class that outputs the time since construction on destruction.
 ///Depends on the loggerlevel. If ROSCONSOLE_MIN_SEVERITY is set
 ///above INFO, only Timers with unconditional_logging=true will
@@ -19,5 +20,5 @@ class ScopedTimer {
     const char* name;
     bool unconditional_triggering;
 };
-
+} // namespace rgbdslam
 #endif

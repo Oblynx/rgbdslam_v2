@@ -1,6 +1,8 @@
 #include "header.h"
 #include <pcl_conversions/pcl_conversions.h>
 
+using namespace rgbdslam;
+
 myHeader::myHeader()
 {
   seq = 0;

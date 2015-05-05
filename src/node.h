@@ -54,6 +54,7 @@
 #include <Eigen/StdVector>
 #include "header.h"
 
+namespace rgbdslam{
 typedef std::vector<Eigen::Vector4f, Eigen::aligned_allocator<Eigen::Vector4f> > std_vector_of_eigen_vector4f;
 //!Holds the data for one graph node and provides functionality to compute relative transformations to other Nodes.
 class Node {
@@ -258,4 +259,5 @@ void pairwiseObservationLikelihood(const Node* newer_node, const Node* older_nod
 ///Compute the RootSIFT from SIFT according to Arandjelovic and Zisserman
 void squareroot_descriptor_space(cv::Mat& feature_descriptors);
 // Compute the transformation from matches using pcl::TransformationFromCorrespondences
+} // namespace rgbdslam
 #endif

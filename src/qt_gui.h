@@ -32,6 +32,7 @@
 #include <QMatrix4x4>
 #include <QMap>
 
+namespace rgbdslam{
 class QAction;
 class QActionGroup;
 class QLabel;
@@ -183,4 +184,5 @@ private:
     QMap<int, QProgressBar*> progressbars;
 };
 
+} // namespace rgbdslam
 #endif

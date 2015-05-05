@@ -52,6 +52,8 @@
 //for comparison with ground truth from mocap and movable cameras on robots
 #include <tf/transform_listener.h>
 
+using namespace rgbdslam;
+
 typedef message_filters::Subscriber<sensor_msgs::Image> image_sub_type;      
 typedef message_filters::Subscriber<sensor_msgs::CameraInfo> cinfo_sub_type;      
 typedef message_filters::Subscriber<sensor_msgs::PointCloud2> pc_sub_type;      

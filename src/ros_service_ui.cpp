@@ -22,6 +22,8 @@
 #include <limits>
 #include "ros/ros.h"
 
+using namespace rgbdslam;
+
 RosUi::RosUi(const char* service_namespace) : filename("quicksave.pcd"), record_on(false)
 {
     ros::NodeHandle n(service_namespace);

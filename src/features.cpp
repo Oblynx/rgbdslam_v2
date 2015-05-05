@@ -29,6 +29,7 @@
 #include <string>
 #include <algorithm>
 
+using namespace rgbdslam;
 using namespace cv;
 
 StatefulFeatureDetector* adjusterWrapper(cv::Ptr<DetectorAdjuster> detadj, int min, int max)

@@ -24,6 +24,8 @@
 #include "parameter_server.h"
 #include "ros_service_ui.h"
 
+using namespace rgbdslam;
+
 //TODO:
 //better potential-edge-selection through flann or place recognition
 //Better separation of function, communication, parameters and gui

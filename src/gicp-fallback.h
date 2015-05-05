@@ -29,14 +29,14 @@
 #include <Eigen/Core>
 #include "parameter_server.h"
 
-
+namespace rgbdslam{
 void saveCloud(const char* filename, const pointcloud_type& pc, const int max_cnt = 10000, const bool color = false);
 
 void downSample(const pointcloud_type& src, pointcloud_type& to);
 
 bool gicpfallback(const pointcloud_type& from, const pointcloud_type& to, Eigen::Matrix4f& transform);
 
-
+} // namespace rgbdslam
 
 #endif //USE_ICP_BIN
 #endif /* GICP_FALLBACK_H_ */

@@ -1,5 +1,8 @@
 #include "matching_result.h"
 #include "sstream"
+
+using namespace rgbdslam;
+
 const char* MatchingResult::toString(){
   std::stringstream ss;
   ss << "edge id1: " << edge.id1 << "; ";

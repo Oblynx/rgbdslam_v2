@@ -38,6 +38,8 @@
 #define GL_MULTISAMPLE  0x809D
 #endif
 
+using namespace rgbdslam;
+
 const double PI= 3.14159265358979323846;
 
 template <typename PointType>

@@ -22,6 +22,8 @@
 #include "g2o/types/slam3d/se3quat.h"
 #include <Eigen/Core>
 
+namespace rgbdslam{
+
 struct LoadedEdge3D
 {
   int id1, id2;
@@ -53,4 +55,5 @@ struct LoadedEdgeComparator3D
 
 typedef std::set<LoadedEdge3D, LoadedEdgeComparator3D> LoadedEdgeSet3D;
 
+} // namespace rgbdslam
 #endif

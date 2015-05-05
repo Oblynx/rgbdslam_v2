@@ -2,6 +2,8 @@
 #include <ros/console.h>
 #include "parameter_server.h"
 
+using namespace rgbdslam;
+
 ScopedTimer::ScopedTimer(const char* thename, bool only_for_logging, bool unconditional_logging)
  : name(thename), unconditional_triggering(unconditional_logging)
 {

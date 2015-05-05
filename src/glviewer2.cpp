@@ -17,6 +17,8 @@
 
 #include "glviewer.h"
 
+using namespace rgbdslam;
+
 GLViewer::GLViewer(QWidget *parent) : QWidget(parent) { }
 GLViewer::~GLViewer() { }
 void GLViewer::initialPosition() { }

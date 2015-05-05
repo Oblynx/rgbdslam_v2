@@ -28,6 +28,7 @@
 #include <QThread>
 #include <QObject>
 
+namespace rgbdslam{
 class QtROS : public QThread {
   Q_OBJECT
 
@@ -49,4 +50,6 @@ class QtROS : public QThread {
     bool quitfromgui;
     ros::NodeHandle* n;
 };
+
+} // namespace rgbdslam
 #endif

@@ -50,6 +50,8 @@
 #include <iostream>
 #include <algorithm> //for min
 //#include <ros/ros.h>
+
+using namespace rgbdslam;
 using namespace cv;
 
 

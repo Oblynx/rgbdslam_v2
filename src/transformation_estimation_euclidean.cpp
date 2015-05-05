@@ -4,6 +4,8 @@
 #include <Eigen/Geometry>
 #include "parameter_server.h"
 
+using namespace rgbdslam;
+
 Eigen::Matrix4f getTransformFromMatches(const Node* newer_node,
                                         const Node* earlier_node,
                                         const std::vector<cv::DMatch>& matches,

@@ -15,6 +15,8 @@
  */
 #include "parameter_server.h"
 
+using namespace rgbdslam;
+
 //using namespace std;
 
 ParameterServer* ParameterServer::_instance = NULL;

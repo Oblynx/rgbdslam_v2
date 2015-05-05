@@ -46,6 +46,7 @@
 #include "g2o/core/optimization_algorithm_levenberg.h"
 #include "scoped_timer.h"
 
+using namespace rgbdslam;
 
 //typedef g2o::BlockSolver< g2o::BlockSolverTraits<-1, -1> >  SlamBlockSolver;
 typedef g2o::BlockSolver< g2o::BlockSolverTraits<6, 3> >  SlamBlockSolver;

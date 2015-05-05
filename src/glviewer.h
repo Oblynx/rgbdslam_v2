@@ -24,6 +24,7 @@
 #include "parameter_server.h"
 #include "renderable.h"
 
+namespace rgbdslam{
 //!OpenGL based display of the 3d model 
 class GLViewer : public QGLWidget {
     Q_OBJECT
@@ -154,4 +155,6 @@ private:
 };
 
 void drawEllipsoid(float fA, float fB, float fC, const Eigen::Vector4f& p);
+
+} // namespace rgbdslam{
 #endif
