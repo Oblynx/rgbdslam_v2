@@ -1,6 +1,6 @@
-#include "node.h"
-#include "scoped_timer.h"
-#include "transformation_estimation.h"
+#include "rgbdslam/node.h"
+#include "rgbdslam/scoped_timer.h"
+#include "rgbdslam/transformation_estimation.h"
 //#include "g2o/core/graph_optimizer_sparse.h"
 #include "g2o/core/sparse_optimizer.h"
 #include "g2o/core/block_solver.h"
@@ -11,7 +11,7 @@
 #include "g2o/types/slam3d/se3quat.h"
 #include "g2o/types/slam3d/edge_se3_pointxyz_depth.h"
 #include "g2o/types/slam3d/vertex_pointxyz.h"
-#include "misc2.h" //Only for point_information_matrix. TODO: Move to misc2.h
+#include "rgbdslam/misc2.h" //Only for point_information_matrix. TODO: Move to misc2.h
 #include <Eigen/SVD>
 //TODO: Move these definitions and includes into a common header, g2o.h
 #include "g2o/core/estimate_propagator.h"

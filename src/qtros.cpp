@@ -15,7 +15,7 @@
  */
 
 
-#include "qtros.h"
+#include "rgbdslam/qtros.h"
 
 QtROS::QtROS(int argc, char *argv[], const char* node_name) {
   std::cout << "Initializing Node...\n";

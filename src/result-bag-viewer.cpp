@@ -14,14 +14,14 @@
  * along with RGBDSLAM.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "bagloader.h"
-#include "qtros.h"
+#include "rgbdslam/bagloader.h"
+#include "rgbdslam/qtros.h"
 #include <QApplication>
 #include <QObject>
-#include "qt_gui.h"
+#include "rgbdslam/qt_gui.h"
 #include <Eigen/Core>
-#include "parameter_server.h"
-#include "ros_service_ui.h"
+#include "rgbdslam/parameter_server.h"
+#include "rgbdslam/ros_service_ui.h"
 
 //TODO:
 //better potential-edge-selection through flann or place recognition

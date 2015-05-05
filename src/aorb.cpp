@@ -38,7 +38,7 @@
 #include "opencv2/imgproc/imgproc.hpp"
 #include "opencv2/imgproc/imgproc_c.h"
 #include "opencv2/core/internal.hpp"
-#include "aorb.h"
+#include "rgbdslam/aorb.h"
 #include <iterator>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -979,4 +979,3 @@ AlgorithmInfo* AORB::info() const
 }
 
 }
-

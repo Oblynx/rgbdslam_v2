@@ -1,6 +1,6 @@
-#include "scoped_timer.h"
+#include "rgbdslam/scoped_timer.h"
 #include <ros/console.h>
-#include "parameter_server.h"
+#include "rgbdslam/parameter_server.h"
 
 ScopedTimer::ScopedTimer(const char* thename, bool only_for_logging, bool unconditional_logging)
  : name(thename), unconditional_triggering(unconditional_logging)

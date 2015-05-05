@@ -30,9 +30,9 @@
 #ifdef GL2PS
 #include <gl2ps.h>
 #endif
-#include "glviewer.h"
-#include "misc2.h"
-#include "scoped_timer.h"
+#include "rgbdslam/glviewer.h"
+#include "rgbdslam/misc2.h"
+#include "rgbdslam/scoped_timer.h"
 
 #ifndef GL_MULTISAMPLE
 #define GL_MULTISAMPLE  0x809D

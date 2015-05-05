@@ -1,8 +1,8 @@
-#include "transformation_estimation_euclidean.h"
-#include "node.h"
+#include "rgbdslam/transformation_estimation_euclidean.h"
+#include "rgbdslam/node.h"
 #include <pcl/common/transformation_from_correspondences.h>
 #include <Eigen/Geometry>
-#include "parameter_server.h"
+#include "rgbdslam/parameter_server.h"
 
 Eigen::Matrix4f getTransformFromMatches(const Node* newer_node,
                                         const Node* earlier_node,

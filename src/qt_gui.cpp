@@ -27,9 +27,9 @@
 #include <QFont>
 #include <QIcon>
 #include <QKeySequence>
-#include "qt_gui.h"
+#include "rgbdslam/qt_gui.h"
 #include <limits>
-#include "glviewer.h"
+#include "rgbdslam/glviewer.h"
 #include <QList>
 #include <QComboBox>
 

@@ -6,7 +6,7 @@
  */
 
 
-#include "graph_manager.h"
+#include "rgbdslam/graph_manager.h"
 
 using namespace std;
 

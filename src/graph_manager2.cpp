@@ -13,11 +13,11 @@
  * You should have received a copy of the GNU General Public License
  * along with RGBDSLAM.  If not, see <http://www.gnu.org/licenses/>.
  */
-#include "graph_manager.h"
-#include "misc.h"
-#include "covariance_estimation.h"
+#include "rgbdslam/graph_manager.h"
+#include "rgbdslam/misc.h"
+#include "rgbdslam/covariance_estimation.h"
 #include "g2o/types/slam3d/edge_se3.h" //For setEmpiricalCovariances
-#include "scoped_timer.h"
+#include "rgbdslam/scoped_timer.h"
 
 ///This file contains methods of the GraphManager class without extra 
 ///dependencies (except for the class header).

@@ -20,10 +20,10 @@
 #include "opencv2/highgui/highgui.hpp"
 #include "opencv2/nonfree/nonfree.hpp"
 #endif
-#include "aorb.h"
+#include "rgbdslam/aorb.h"
 
-#include "feature_adjuster.h"
-#include "parameter_server.h"
+#include "rgbdslam/feature_adjuster.h"
+#include "rgbdslam/parameter_server.h"
 #include "ros/ros.h"
 //For tolower and transform
 #include <string>

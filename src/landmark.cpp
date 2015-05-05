@@ -6,12 +6,12 @@
  */
 
 
-#include "landmark.h"
-#include "misc2.h"
+#include "rgbdslam/landmark.h"
+#include "rgbdslam/misc2.h"
 
 #ifdef DO_FEATURE_OPTIMIZATION
 
-#include "graph_manager.h"
+#include "rgbdslam/graph_manager.h"
 
 #include "g2o/types/slam3d/parameter_camera.h"
 //#include "g2o/types/slam3d/camera_parameters.h"

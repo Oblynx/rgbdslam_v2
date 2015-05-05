@@ -19,8 +19,8 @@
 #include <visualization_msgs/Marker.h>
 #include <geometry_msgs/Point.h>
 //#include <rgbdslam/CloudTransforms.h>
-#include "graph_manager.h"
-#include "misc.h"
+#include "rgbdslam/graph_manager.h"
+#include "rgbdslam/misc.h"
 //#include <sensor_msgs/PointCloud2.h>
 #include <opencv2/features2d/features2d.hpp>
 #include <QThread>
@@ -44,7 +44,7 @@
 #include "g2o/core/sparse_optimizer.h"
 #include "g2o/core/optimization_algorithm_dogleg.h"
 #include "g2o/core/optimization_algorithm_levenberg.h"
-#include "scoped_timer.h"
+#include "rgbdslam/scoped_timer.h"
 
 
 //typedef g2o::BlockSolver< g2o::BlockSolverTraits<-1, -1> >  SlamBlockSolver;

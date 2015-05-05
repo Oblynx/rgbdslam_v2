@@ -18,9 +18,9 @@
  * data via ROS, to the screen (visualization) or to disk. They are declared in graph_manager.h */
 
 #include <sys/time.h>
-#include "scoped_timer.h"
-#include "graph_manager.h"
-#include "misc.h"
+#include "rgbdslam/scoped_timer.h"
+#include "rgbdslam/graph_manager.h"
+#include "rgbdslam/misc.h"
 #include "pcl_ros/transforms.h"
 #include "pcl/io/pcd_io.h"
 //#include <sensor_msgs/PointCloud2.h>

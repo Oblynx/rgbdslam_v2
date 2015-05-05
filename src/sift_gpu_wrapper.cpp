@@ -15,13 +15,13 @@
  */
 
 #ifdef USE_SIFT_GPU
-#include "sift_gpu_wrapper.h"
+#include "rgbdslam/sift_gpu_wrapper.h"
 #include <GL/gl.h>
 #include <iostream>
 #include <ros/ros.h>
 #include <stdio.h>
-#include "parameter_server.h"
-#include "scoped_timer.h"
+#include "rgbdslam/parameter_server.h"
+#include "rgbdslam/scoped_timer.h"
 using namespace cv;
 
 SiftGPUWrapper* SiftGPUWrapper::instance = NULL;

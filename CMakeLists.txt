@@ -2,13 +2,13 @@ cmake_minimum_required(VERSION 2.4.6)
 #########################################################
 ### USER CONFIG #########################################
 #########################################################
-set(USE_SIFT_GPU        1) 
+set(USE_SIFT_GPU        0) 
 set(ENV{SIFT_GPU_MODE}	2) #CUDA = 1, GLSL = 2
 set(ENV{SIFT_GPU_CUDA_PATH}	/usr/local/cuda)	
 set(USE_GICP_BIN		0)
 set(USE_GICP_CODE		0)
 set(USE_PCL_ICP		  0)
-set(USE_GL2PS       0) #For printing the 3D Window to PostScript - requires installation of additional library: libgl2ps-dev
+set(USE_GL2PS       1) #For printing the 3D Window to PostScript - requires installation of additional library: libgl2ps-dev
 IF ("${ROS_PARALLEL_JOBS}" EQUAL "")
   set(ROS_PARALLEL_JOBS 1)
 endif ("${ROS_PARALLEL_JOBS}" EQUAL "")
@@ -186,7 +186,7 @@ add_definitions(${EIGEN_DEFINITIONS})
 
 file(GLOB QT_FORMS RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} ui/*.ui)
 file(GLOB QT_RESOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} resources/*.qrc)
-file(GLOB_RECURSE QT_MOC RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} FOLLOW_SYMLINKS include/local/*.hpp src/qtros.h src/openni_listener.h src/qt_gui.h src/graph_manager.h src/glviewer.h src/ros_service_ui.h)
+file(GLOB_RECURSE QT_MOC RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} FOLLOW_SYMLINKS include/local/*.hpp include/rgbdslam/qtros.h include/rgbdslam/openni_listener.h include/rgbdslam/qt_gui.h include/rgbdslam/graph_manager.h include/rgbdslam/glviewer.h include/rgbdslam/ros_service_ui.h)
 
 QT4_ADD_RESOURCES(QT_RESOURCES_CPP ${QT_RESOURCES})
 QT4_WRAP_UI(QT_FORMS_HPP ${QT_FORMS})
@@ -195,14 +195,20 @@ QT4_WRAP_CPP(QT_MOC_HPP ${QT_MOC})
 ##############################################################################
 # Sources to Compile
 ##############################################################################
-SET(ADDITIONAL_SOURCES src/gicp-fallback.cpp src/main.cpp src/qtros.cpp  src/openni_listener.cpp src/qt_gui.cpp src/node.cpp src/glviewer.cpp src/parameter_server.cpp src/ros_service_ui.cpp src/misc.cpp src/landmark.cpp src/loop_closing.cpp src/ColorOctomapServer.cpp src/scoped_timer.cpp src/icp.cpp src/matching_result.cpp)
+SET(ADDITIONAL_SOURCES src/gicp-fallback.cpp src/main.cpp src/qtros.cpp  src/openni_listener.cpp 
+    src/qt_gui.cpp src/node.cpp src/glviewer.cpp src/parameter_server.cpp src/ros_service_ui.cpp 
+    src/misc.cpp src/landmark.cpp src/loop_closing.cpp src/ColorOctomapServer.cpp 
+    src/scoped_timer.cpp src/icp.cpp src/matching_result.cpp src/aorb.cpp)
 #GraphManager Files
-SET(ADDITIONAL_SOURCES ${ADDITIONAL_SOURCES} src/graph_manager.cpp src/graph_mgr_io.cpp src/graph_manager2.cpp src/graph_mgr_odom.cpp)
-SET(ADDITIONAL_SOURCES ${ADDITIONAL_SOURCES} src/transformation_estimation_euclidean.cpp src/transformation_estimation.cpp src/graph_manager2.cpp src/header.cpp)
+SET(ADDITIONAL_SOURCES ${ADDITIONAL_SOURCES} src/graph_manager.cpp src/graph_mgr_io.cpp 
+    src/graph_manager2.cpp src/graph_mgr_odom.cpp)
+SET(ADDITIONAL_SOURCES ${ADDITIONAL_SOURCES} src/transformation_estimation_euclidean.cpp 
+    src/transformation_estimation.cpp src/graph_manager2.cpp src/header.cpp)
 #Computation of meaningful covariances
 SET(ADDITIONAL_SOURCES ${ADDITIONAL_SOURCES} src/covariance_estimation.cpp) # src/edge_labeler.cpp)
 #Detector Threshold Adapter
-SET(ADDITIONAL_SOURCES ${ADDITIONAL_SOURCES} src/feature_adjuster.cpp src/aorb.cpp src/features.cpp)
+#SET(ADDITIONAL_SOURCES ${ADDITIONAL_SOURCES} src/feature_adjuster.cpp src/aorb.cpp src/features.cpp)
+SET(ADDITIONAL_SOURCES ${ADDITIONAL_SOURCES} src/feature_adjuster.cpp src/features.cpp)
 
 IF (${USE_SIFT_GPU})
  	SET(ADDITIONAL_SOURCES ${ADDITIONAL_SOURCES} src/sift_gpu_wrapper.cpp)
@@ -210,7 +216,12 @@ ENDIF (${USE_SIFT_GPU})
 
 file(GLOB_RECURSE QT_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} FOLLOW_SYMLINKS)
 
-include_directories(external/ /usr/include/suitesparse/)
+include_directories(
+  /usr/include/suitesparse/
+  external
+  include
+  ${catkin_INCLUDE_DIRS}
+  )
 
 ##############################################################################
 # Binaries
@@ -225,7 +236,8 @@ add_dependencies(rgbdslam rgbdslam_gencpp)
 #SET(G2O_LIBS ${G2O_LIBRARIES} cholmod cxsparse)
 #SET(LIBS_LINK GL GLU -lgl2ps ${G2O_LIBS} ${QT_LIBRARIES} ${QT_QTOPENGL_LIBRARY} ${GLUT_LIBRARY} ${OPENGL_LIBRARY} ${OpenCV_LIBS})
 #Use specific version of cxsparse, to avoid linker warning about possible conflicts between versions 2.2.3 (linked from g2o) and 3.1.0
-SET(LIBS_LINK GL GLU cholmod /usr/lib/libcxsparse.so.2.2.3 ${G2O_LIBRARIES} ${QT_LIBRARIES} ${QT_QTOPENGL_LIBRARY} ${GLUT_LIBRARY} ${OPENGL_LIBRARY} ${OpenCV_LIBS})
+SET(LIBS_LINK GL GLU cholmod /usr/lib/libcxsparse.so.2.2.3 ${G2O_LIBRARIES} ${QT_LIBRARIES} 
+    ${QT_QTOPENGL_LIBRARY} ${GLUT_LIBRARY} ${OPENGL_LIBRARY} ${OpenCV_LIBS})
 #-lboost_signals -lrt -loctomap -loctomap_server -loctomath)
 
 IF (${USE_SIFT_GPU})
@@ -262,7 +274,7 @@ ENDIF (${USE_GICP})
 #
 #file(GLOB QT_FORMS2 RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} ui/*.ui)
 #file(GLOB QT_RESOURCES2 RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} resources/*.qrc)
-#file(GLOB_RECURSE QT_MOC2 RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} FOLLOW_SYMLINKS include/local/*.hpp src/qtros.h src/bagloader.h src/qt_gui.h src/glviewer.h)
+#file(GLOB_RECURSE QT_MOC2 RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} FOLLOW_SYMLINKS include/local/*.hpp include/rgbdslam/qtros.h include/rgbdslam/bagloader.h include/rgbdslam/qt_gui.h include/rgbdslam/glviewer.h)
 #
 #QT4_ADD_RESOURCES(QT_RESOURCES_CPP2 ${QT_RESOURCES2})
 #QT4_WRAP_UI(QT_FORMS_HPP2 ${QT_FORMS2})

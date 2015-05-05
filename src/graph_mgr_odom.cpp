@@ -1,6 +1,6 @@
-#include "graph_manager.h"
-#include "scoped_timer.h"
-#include "misc.h"
+#include "rgbdslam/graph_manager.h"
+#include "rgbdslam/scoped_timer.h"
+#include "rgbdslam/misc.h"
 #include "g2o/core/robust_kernel_factory.h"
 #include <tf/transform_listener.h>
 #include "g2o/types/slam3d/edge_se3.h"

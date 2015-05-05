@@ -40,12 +40,12 @@
  //
  //M*/
 
-#include "feature_adjuster.h"
+#include "rgbdslam/feature_adjuster.h"
 //#include "opencv2/features2d/precomp.hpp"
 #include "opencv2/features2d/features2d.hpp"
 #include "opencv2/nonfree/features2d.hpp"
 #include "opencv2/imgproc/imgproc.hpp"
-#include "aorb.h"
+#include "rgbdslam/aorb.h"
 #include <cassert>
 #include <iostream>
 #include <algorithm> //for min

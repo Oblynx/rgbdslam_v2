@@ -15,12 +15,12 @@
  */
 
 
-#include "node.h"
-#include "features.h"
-#include "transformation_estimation_euclidean.h"
-#include "transformation_estimation.h"
+#include "rgbdslam/node.h"
+#include "rgbdslam/features.h"
+#include "rgbdslam/transformation_estimation_euclidean.h"
+#include "rgbdslam/transformation_estimation.h"
 #include <cmath>
-#include "scoped_timer.h"
+#include "rgbdslam/scoped_timer.h"
 #include <Eigen/Geometry>
 //#include "pcl/ros/conversions.h"
 #include <pcl/common/transformation_from_correspondences.h>
@@ -29,7 +29,7 @@
 //#include <QtConcurrentMap> 
 
 #ifdef USE_SIFT_GPU
-#include "sift_gpu_wrapper.h"
+#include "rgbdslam/sift_gpu_wrapper.h"
 #endif
 
 //#include <math.h>
@@ -39,7 +39,7 @@
 //#include "../external/gicp/transform.h"
 //#endif
 #ifdef USE_ICP_BIN
-#include "gicp-fallback.h"
+#include "rgbdslam/gicp-fallback.h"
 #endif
 
 #ifdef USE_ICP_CODE
@@ -48,13 +48,13 @@
 #endif
 
 //#include <iostream>
-#include "misc.h"
-#include "misc2.h"
+#include "rgbdslam/misc.h"
+#include "rgbdslam/misc2.h"
 #include <pcl/filters/voxel_grid.h>
 #include <pcl/filters/impl/voxel_grid.hpp>
 #include <opencv/highgui.h>
 #ifdef USE_PCL_ICP
-#include "icp.h"
+#include "rgbdslam/icp.h"
 #endif
 #include <string>
 #include <iostream>

@@ -15,7 +15,7 @@
  */
 
 
-#include "glviewer.h"
+#include "rgbdslam/glviewer.h"
 
 GLViewer::GLViewer(QWidget *parent) : QWidget(parent) { }
 GLViewer::~GLViewer() { }

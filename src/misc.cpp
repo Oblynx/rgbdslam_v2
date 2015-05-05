@@ -21,10 +21,10 @@
 #include <ctime>
 #include <limits>
 #include <algorithm>
-#include "parameter_server.h"
+#include "rgbdslam/parameter_server.h"
 #include <cv.h>
-#include "scoped_timer.h"
-#include "header.h"
+#include "rgbdslam/scoped_timer.h"
+#include "rgbdslam/header.h"
 
 #include "g2o/types/slam3d/se3quat.h"
 #include "g2o/types/slam3d/vertex_se3.h"
@@ -39,17 +39,17 @@
 #include "opencv2/highgui/highgui.hpp"
 #include "opencv2/nonfree/nonfree.hpp"
 #endif
-#include "aorb.h"
+#include "rgbdslam/aorb.h"
 
 #include <omp.h>
-#include "misc2.h"
-#include "point_types.h"
+#include "rgbdslam/misc2.h"
+#include "rgbdslam/point_types.h"
 
 //For the observability test
 #include <boost/math/distributions/chi_squared.hpp>
 #include <numeric>
 
-#include "feature_adjuster.h"
+#include "rgbdslam/feature_adjuster.h"
 #include <sensor_msgs/Image.h>
 #include <sensor_msgs/CameraInfo.h>
 

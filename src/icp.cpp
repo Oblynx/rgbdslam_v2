@@ -4,7 +4,7 @@
 #define PCL_NO_PRECOMPILE
 #endif
 #include <iostream>
-#include "parameter_server.h"
+#include "rgbdslam/parameter_server.h"
 #include <pcl/io/pcd_io.h>
 #include <pcl/point_types.h>
 #include <pcl/registration/icp_nl.h>
@@ -15,7 +15,7 @@
 //#include </opt/ros/fuerte/include/pcl-1.5/pcl/kdtree/impl/kdtree_flann.hpp>
 //#include <pcl/registration/impl/gicp.hpp>
 #include <pcl/filters/filter.h>
-#include "scoped_timer.h"
+#include "rgbdslam/scoped_timer.h"
 
 void filterCloud(const pointcloud_type& cloud_in, pointcloud_type& cloud_out, int desired_size){
   ScopedTimer s(__FUNCTION__);

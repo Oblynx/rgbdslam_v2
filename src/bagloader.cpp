@@ -15,20 +15,20 @@
  */
 
 
-#include "parameter_server.h"
+#include "rgbdslam/parameter_server.h"
 //Documentation see header file
 #include "pcl/ros/conversions.h"
 #include <pcl/io/io.h>
 //#include "pcl/common/transform.h"
 #include "pcl_ros/transforms.h"
-#include "bagloader.h"
+#include "rgbdslam/bagloader.h"
 #include <iostream>
 #include <sstream>
 #include <string>
 //#include <ctime>
 #include <sensor_msgs/PointCloud2.h>
 #include <Eigen/Core>
-#include "misc.h"
+#include "rgbdslam/misc.h"
 //#include <image_geometry/pinhole_camera_model.h>
 //#include "pcl/ros/for_each_type.h"
 
@@ -37,7 +37,7 @@
 #include <boost/foreach.hpp>
 
 
-#include "scoped_timer.h"
+#include "rgbdslam/scoped_timer.h"
 //for comparison with ground truth from mocap and movable cameras on robots
 #include <tf/transform_listener.h>
 

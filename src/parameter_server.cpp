@@ -13,7 +13,7 @@
  * You should have received a copy of the GNU General Public License
  * along with RGBDSLAM.  If not, see <http://www.gnu.org/licenses/>.
  */
-#include "parameter_server.h"
+#include "rgbdslam/parameter_server.h"
 
 //using namespace std;
 

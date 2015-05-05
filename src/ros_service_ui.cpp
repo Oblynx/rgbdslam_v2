@@ -18,7 +18,7 @@
 #include <QFont>
 #include <QIcon>
 #include <QKeySequence>
-#include "ros_service_ui.h"
+#include "rgbdslam/ros_service_ui.h"
 #include <limits>
 #include "ros/ros.h"
 

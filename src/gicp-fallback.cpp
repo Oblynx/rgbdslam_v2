@@ -24,7 +24,7 @@
 
 #ifdef USE_ICP_BIN
 #define PCL_NO_PRECOMPILE
-#include "gicp-fallback.h"
+#include "rgbdslam/gicp-fallback.h"
 
 #include <fstream>
 #include <sstream>

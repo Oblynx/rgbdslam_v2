@@ -14,15 +14,15 @@
  * along with RGBDSLAM.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "openni_listener.h"
-#include "qtros.h"
+#include "rgbdslam/openni_listener.h"
+#include "rgbdslam/qtros.h"
 #include <QApplication>
 #include <QObject>
-#include "qt_gui.h"
-#include "glviewer.h"
+#include "rgbdslam/qt_gui.h"
+#include "rgbdslam/glviewer.h"
 #include <Eigen/Core>
-#include "parameter_server.h"
-#include "ros_service_ui.h"
+#include "rgbdslam/parameter_server.h"
+#include "rgbdslam/ros_service_ui.h"
 
 //TODO:
 //better potential-edge-selection through flann or place recognition
