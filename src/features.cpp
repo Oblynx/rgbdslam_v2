@@ -76,7 +76,7 @@ FeatureDetector* createDetector(const std::string& detectorName){
   else if(detectorName == "SIFT") {
      detAdj = new DetectorAdjuster("SIFT", 0.04, 0.0001);
   }
-  else if(detectorName == "ORB") {
+  else if(detectorName == "AORB") {
      detAdj = new DetectorAdjuster("AORB", 20);
   } 
   else {
@@ -123,8 +123,8 @@ DescriptorExtractor* createDescriptorExtractor(const std::string& descriptorType
         extractor->set("extended", 1);
     }
 #if CV_MAJOR_VERSION > 2 || CV_MINOR_VERSION >= 3
-    else if(descriptorType == "ORB") {
-        extractor = new OrbDescriptorExtractor();
+    else if(descriptorType == "AORB") {
+        extractor = new AorbDescriptorExtractor();
     }
 #endif
     else if(descriptorType == "SIFTGPU") {
